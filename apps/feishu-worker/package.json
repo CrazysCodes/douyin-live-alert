@@ -1,9 +1,9 @@
 {
   "name": "@douyin-live-alert/feishu-worker",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "dependencies": {
-    "@douyin-live-alert/core": "0.1.0"
+    "@douyin-live-alert/core": "1.0.0"
   }
 }
