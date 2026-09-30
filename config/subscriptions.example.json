@@ -1,0 +1,9 @@
+{
+  "subscriptions": [
+    {
+      "url": "https://www.douyin.com/user/REPLACE_WITH_SEC_UID",
+      "label": "示例主播",
+      "enabled": true
+    }
+  ]
+}

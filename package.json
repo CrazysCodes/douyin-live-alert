@@ -1,0 +1,36 @@
+{
+  "name": "douyin-live-alert",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrazysCodes/douyin-live-alert.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CrazysCodes/douyin-live-alert/issues"
+  },
+  "homepage": "https://github.com/CrazysCodes/douyin-live-alert#readme",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "node --test packages/core/test/*.test.mjs apps/feishu-worker/test/*.test.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "verify": "npm test && npm run doctor",
+    "dry-run:cloudflare": "wrangler deploy --dry-run --config apps/feishu-worker/wrangler.local.jsonc",
+    "setup:feishu": "node scripts/setup-feishu.mjs",
+    "check": "node scripts/check-once.mjs",
+    "canary": "node scripts/canary-report.mjs",
+    "deploy:cloudflare": "node scripts/deploy-cloudflare.mjs",
+    "seed:cloudflare": "node scripts/seed-cloudflare.mjs"
+  },
+  "devDependencies": {
+    "@larksuiteoapi/node-sdk": "^1.74.0",
+    "wrangler": "^4.40.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

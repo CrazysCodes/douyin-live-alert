@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "product": "douyin-live-alert-feishu",
+  "target": "cloudflare-workers-d1",
+  "entrypoint": "apps/feishu-worker/src/index.js",
+  "healthPath": "/health",
+  "secrets": ["FEISHU_APP_ID", "FEISHU_APP_SECRET", "FEISHU_RECEIVE_ID", "ADMIN_TOKEN"],
+  "operatorEnvironment": ["CLOUDFLARE_API_TOKEN", "CLOUDFLARE_ACCOUNT_ID"],
+  "commands": {
+    "doctor": "npm run doctor",
+    "test": "npm test",
+    "deploy": "npm run deploy:cloudflare",
+    "seed": "npm run seed:cloudflare -- config/subscriptions.json",
+    "canary": "npm run canary"
+  }
+}

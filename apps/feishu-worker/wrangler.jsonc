@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "douyin-live-alert-feishu",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-01",
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "FEISHU_RECEIVE_ID_TYPE": "open_id",
+    "POLL_INTERVAL_SECONDS": "60",
+    "POLL_BATCH_SIZE": "12",
+    "POLL_CONCURRENCY": "5",
+    "DELIVERY_CONCURRENCY": "3"
+  },
+  "triggers": {
+    "crons": ["* * * * *"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "douyin-live-alert",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
