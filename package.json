@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@larksuiteoapi/node-sdk": "^1.74.0",
-    "wrangler": "^4.40.0"
+    "wrangler": "^4.151.1"
   },
   "engines": {
     "node": ">=22"
